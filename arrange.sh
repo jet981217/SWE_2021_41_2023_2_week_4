@@ -1,12 +1,12 @@
 cd files
 
 for file in *; do
-    first_letter=$(echo $file | head -c 1 | tr '[:upper:]' '[:lower:]')
+    alpha=$(echo $file | head -c 1 | tr '[:upper:]' '[:lower:]')
     
-    if [ ! -d "../$first_letter" ]; then
-        echo "Directory $first_letter does not exist!"
+    if [ ! -d "../$alpha" ]; then
+        echo "Something wrong with dir"
         continue
     fi
 
-    mv "$file" "../$first_letter/"
+    mv "$file" "../$alpha/"
 done
